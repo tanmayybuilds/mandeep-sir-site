@@ -51,7 +51,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <a href="#strategy" className="hover:text-teal-300 transition-colors">
-                  3-Step Strategy
+                  The Smartest Strategy
                 </a>
               </li>
               <li>

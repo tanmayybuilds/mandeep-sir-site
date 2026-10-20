@@ -70,6 +70,30 @@ export const CompoundingCalculator: React.FC<CompoundingCalculatorProps> = ({
           </p>
         </div>
 
+        {/* Featured Mandeep Illustration Box from Graphic */}
+        <div className="p-5 rounded-2xl bg-teal-50/70 border border-teal-200/80 flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="flex items-center gap-3.5">
+            <div className="w-11 h-11 rounded-xl bg-teal-500/15 text-teal-700 flex items-center justify-center shrink-0">
+              <TrendingUp className="w-5 h-5 stroke-[2.2]" />
+            </div>
+            <div>
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-teal-800 block">
+                The Power of Compounding · Featured Illustration
+              </span>
+              <p className="font-editorial text-lg sm:text-xl font-bold text-[#0A1628]">
+                $8,000 invested annually for 10 years reaches{' '}
+                <span className="text-teal-700 font-bold tabular-nums">~$105,500</span>
+              </p>
+              <p className="text-xs text-slate-600">
+                Approximately $80,000 contributed + $25,500 in tax-free growth, assuming annual contributions at year-end and a 6% return.
+              </p>
+            </div>
+          </div>
+          <span className="text-[11px] text-slate-500 italic md:text-right shrink-0 max-w-xs leading-tight">
+            Hypothetical example, not a guaranteed return. Investment fees and losses are not included.
+          </span>
+        </div>
+
         {/* Main Calculator Box */}
         <div className="rounded-3xl bg-slate-50/80 border border-slate-200/90 p-7 sm:p-10 shadow-sm">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-stretch">

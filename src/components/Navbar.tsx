@@ -41,7 +41,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
             Growth Simulator
           </a>
           <a href="#strategy" className="hover:text-[#0A1628] transition-colors">
-            3-Step Strategy
+            The Smartest Strategy
           </a>
           <a href="#faq" className="hover:text-[#0A1628] transition-colors">
             FAQ
@@ -102,7 +102,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
               onClick={() => setMobileMenuOpen(false)}
               className="py-1 hover:text-[#0A1628]"
             >
-              3-Step Strategy
+              The Smartest Strategy
             </a>
             <a
               href="#faq"
