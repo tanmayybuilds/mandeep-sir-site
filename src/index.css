@@ -139,3 +139,73 @@ input[type="range"]::-webkit-slider-thumb {
 input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.15);
 }
+
+/* 3D Flowing Windows Animations & Styles */
+@keyframes float-1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+
+@keyframes float-2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-0.6deg);
+  }
+}
+
+@keyframes float-3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(9px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    opacity: 0.2;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.45;
+    transform: scale(1.015);
+  }
+}
+
+.animate-float-1 {
+  animation: float-1 6.5s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: float-2 5.2s ease-in-out infinite;
+}
+
+.animate-float-3 {
+  animation: float-3 7.2s ease-in-out infinite;
+}
+
+.animate-pulse-ring {
+  animation: pulse-ring 4s ease-in-out infinite;
+}
+
+.card-3d-glow {
+  background: rgba(10, 22, 40, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.5), 0 0 20px -5px rgba(45, 212, 191, 0.12);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+}
+
+.card-3d-glow:hover {
+  transform: translateY(-6px) scale(1.02);
+  border-color: rgba(45, 212, 191, 0.4);
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.6), 0 0 30px -5px rgba(45, 212, 191, 0.3);
+}
