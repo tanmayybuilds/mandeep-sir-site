@@ -1,0 +1,6 @@
+{
+  "name": "Mandeep Gurm — TFSA & FHSA Wealth Strategy",
+  "description": "Interactive Canadian TFSA & FHSA wealth planning platform, compounding calculator, and 1-on-1 strategy consultation scheduler with Mandeep Gurm (@mannygurm).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
