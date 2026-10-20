@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { HeroSection } from './components/HeroSection.tsx';
 import { AboutPracticeSection } from './components/AboutPracticeSection.tsx';
+import { WhyChooseSection } from './components/WhyChooseSection.tsx';
 import { AccountDeepDive } from './components/AccountDeepDive.tsx';
 import { CompoundingCalculator } from './components/CompoundingCalculator.tsx';
 import { ComparisonMatrix } from './components/ComparisonMatrix.tsx';
 import { StrategyRoadmap } from './components/StrategyRoadmap.tsx';
+import { TestimonialsSection } from './components/TestimonialsSection.tsx';
+import { FaqSection } from './components/FaqSection.tsx';
 import { BookingEngine } from './components/BookingEngine.tsx';
 import { Footer } from './components/Footer.tsx';
 import { CalculatorScenario, ConsultationFocus } from './types/financial.ts';
@@ -51,7 +54,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#FAF8F5] text-[#141413]">
+    <div className="min-h-screen flex flex-col bg-[#F0F4F8] text-[#0A1628]">
       <Navbar onBookClick={() => scrollToSection('#book')} />
 
       <main className="flex-1">
@@ -62,6 +65,8 @@ export default function App() {
 
         <AboutPracticeSection />
 
+        <WhyChooseSection />
+
         <CompoundingCalculator onLockScenarioAndBook={handleLockScenarioAndBook} />
 
         <AccountDeepDive onSelectConsultationFocus={handleSelectConsultationFocus} />
@@ -69,6 +74,10 @@ export default function App() {
         <ComparisonMatrix />
 
         <StrategyRoadmap onBookStrategyClick={() => scrollToSection('#book')} />
+
+        <TestimonialsSection />
+
+        <FaqSection />
 
         <BookingEngine
           selectedFocus={selectedFocus}
@@ -86,13 +95,14 @@ export default function App() {
         <div
           role="status"
           aria-live="polite"
-          className="fixed bottom-5 right-5 z-50 max-w-sm px-4 py-3 rounded-xl bg-[#141413] text-[#FAF8F5] border border-white/15 shadow-lg text-xs sm:text-sm font-medium flex items-center justify-between gap-3"
+          className="fixed bottom-5 right-5 z-50 max-w-sm px-5 py-3.5 rounded-2xl bg-[#0A1628] text-white border border-white/10 shadow-2xl text-xs sm:text-sm font-medium flex items-center justify-between gap-3"
+          style={{ backdropFilter: 'blur(12px)' }}
         >
           <span>{toastMessage}</span>
           <button
             type="button"
             onClick={() => setToastMessage(null)}
-            className="text-xs text-[#D4A359] hover:underline shrink-0 cursor-pointer"
+            className="text-xs text-[#2DD4BF] hover:underline shrink-0 cursor-pointer"
           >
             Dismiss
           </button>

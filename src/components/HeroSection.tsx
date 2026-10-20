@@ -1,5 +1,5 @@
 import React from 'react';
-import { Calendar, ArrowRight, Check, Shield, Clock, Phone, Mail } from 'lucide-react';
+import { Calendar, ArrowRight, Check, Shield, Clock, Phone, Mail, TrendingUp } from 'lucide-react';
 import { MANDEEP_CONFIG } from '../data/mandeepConfig.ts';
 
 interface HeroSectionProps {
@@ -14,18 +14,22 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
   return (
     <section
       id="top"
-      className="relative bg-[#FAF8F5] text-[#141413] border-b border-[#E6E1DA]"
+      className="relative overflow-hidden bg-gradient-to-br from-[#0A1628] via-[#0F1D32] to-[#1B2B44] text-white"
     >
-      <div className="max-w-[1280px] mx-auto px-6 pt-10 pb-16 lg:pt-16 lg:pb-24">
+      {/* Ambient glow effects */}
+      <div className="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-[#2DD4BF]/8 blur-[120px] pointer-events-none" />
+      <div className="absolute bottom-[-30%] left-[-15%] w-[500px] h-[500px] rounded-full bg-[#38BDF8]/6 blur-[100px] pointer-events-none" />
+
+      <div className="relative max-w-[1280px] mx-auto px-6 pt-12 pb-16 lg:pt-20 lg:pb-28">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-stretch">
-          {/* Left Column: Authoritative Editorial Proposition (7 Cols) */}
+          {/* Left Column */}
           <div className="lg:col-span-7 flex flex-col justify-between space-y-8">
-            <div className="space-y-6">
-              {/* Unboxed Credential Kicker */}
-              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs sm:text-sm text-[#57534E]">
-                <span className="inline-flex items-center gap-1.5 font-semibold text-[#141413]">
+            <div className="space-y-7">
+              {/* Credential Kicker */}
+              <div className="flex flex-wrap items-center gap-x-2.5 gap-y-1 text-xs sm:text-sm text-white/60">
+                <span className="inline-flex items-center gap-1.5 font-semibold text-[#2DD4BF]">
                   <svg
-                    className="w-3.5 h-3.5 text-[#9A6B26] shrink-0"
+                    className="w-3.5 h-3.5 text-[#2DD4BF] shrink-0"
                     viewBox="0 0 24 24"
                     fill="currentColor"
                     aria-hidden="true"
@@ -34,7 +38,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </svg>
                   Canadian Registered Wealth &amp; Tax Strategy
                 </span>
-                <span aria-hidden="true" className="hidden sm:inline">
+                <span aria-hidden="true" className="hidden sm:inline text-white/30">
                   ·
                 </span>
                 <span>
@@ -42,88 +46,77 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                 </span>
               </div>
 
-              {/* Editorial Serif Headline */}
-              <div className="space-y-2">
+              {/* Hero Headline */}
+              <div className="space-y-3">
                 <h1
-                  className="font-editorial font-bold tracking-tight text-[#141413] leading-[1.06]"
+                  className="font-editorial font-bold tracking-tight text-white leading-[1.06]"
                   style={{
                     fontSize: 'clamp(2.5rem, 4.6vw, 4.25rem)',
                     textWrap: 'balance',
                   }}
                 >
                   {MANDEEP_CONFIG.advisor.heroHeadline}.{' '}
-                  <span className="italic font-normal text-[#9A6B26] block sm:inline">
+                  <span className="italic font-normal gradient-text-teal block sm:inline">
                     {MANDEEP_CONFIG.advisor.heroScriptSubheadline}
                   </span>
                 </h1>
               </div>
 
-              {/* Lead Editorial Paragraph */}
-              <p className="text-base sm:text-lg text-[#57534E] max-w-2xl leading-relaxed">
-                <strong className="font-semibold text-[#141413]">
+              {/* Lead Paragraph */}
+              <p className="text-base sm:text-lg text-white/70 max-w-2xl leading-relaxed">
+                <strong className="font-semibold text-white">
                   {MANDEEP_CONFIG.advisor.heroSupportingLine}
                 </strong>{' '}
                 Trusted, client-first financial planning for British Columbia professionals,
                 families, and first-time home buyers. From capturing immediate income tax deductions
-                with the <strong className="font-semibold text-[#141413]">FHSA ($8,000/yr)</strong>{' '}
+                with the <strong className="font-semibold text-[#2DD4BF]">FHSA ($8,000/yr)</strong>{' '}
                 to compounding lifelong tax-free wealth inside your{' '}
-                <strong className="font-semibold text-[#141413]">TFSA ($7,000/yr)</strong>—we
+                <strong className="font-semibold text-[#38BDF8]">TFSA ($7,000/yr)</strong>—we
                 replace financial overwhelm with enduring clarity.
               </p>
 
-              {/* 2x2 Value Checkmark Grid (Matching Sarmila-reddy Hero) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 text-xs sm:text-sm font-medium text-[#141413]">
-                <div className="flex items-center gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#141413] text-[#FAF8F5] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3" />
-                  </span>
-                  <span>Complimentary, Zero-Pressure Consultations</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#141413] text-[#FAF8F5] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3" />
-                  </span>
-                  <span>FHSA ($8,000/yr) Tax Deduction &amp; Home Plan</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#141413] text-[#FAF8F5] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3" />
-                  </span>
-                  <span>TFSA ($7,000/yr) Tax-Free Compounding</span>
-                </div>
-                <div className="flex items-center gap-2.5">
-                  <span className="w-5 h-5 rounded-full bg-[#141413] text-[#FAF8F5] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3" />
-                  </span>
-                  <span>Tax-Refund Reinvestment &amp; CRA Room Audit</span>
-                </div>
+              {/* Value Checkmarks */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2 text-xs sm:text-sm font-medium text-white">
+                {[
+                  'Complimentary, Zero-Pressure Consultations',
+                  'FHSA ($8,000/yr) Tax Deduction & Home Plan',
+                  'TFSA ($7,000/yr) Tax-Free Compounding',
+                  'Tax-Refund Reinvestment & CRA Room Audit',
+                ].map((item, idx) => (
+                  <div key={idx} className="flex items-center gap-2.5">
+                    <span className="w-5 h-5 rounded-full bg-gradient-to-br from-[#2DD4BF] to-[#38BDF8] text-[#0A1628] flex items-center justify-center shrink-0">
+                      <Check className="w-3 h-3" />
+                    </span>
+                    <span>{item}</span>
+                  </div>
+                ))}
               </div>
 
-              {/* Primary & Secondary Action Buttons */}
+              {/* CTA Buttons */}
               <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3.5 pt-2">
                 <button
                   type="button"
                   onClick={onPrimaryCtaClick}
-                  className="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-sm font-semibold text-[#FAF8F5] bg-[#141413] hover:bg-[#292524] rounded-full transition-colors cursor-pointer whitespace-nowrap shrink-0"
+                  className="inline-flex items-center justify-center gap-2.5 px-7 py-4 text-sm font-semibold text-[#0A1628] bg-gradient-to-r from-[#2DD4BF] to-[#5EEAD4] hover:from-[#5EEAD4] hover:to-[#2DD4BF] rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0 pulse-glow"
                 >
-                  <Calendar className="w-4 h-4 text-[#D4A359] shrink-0" />
+                  <Calendar className="w-4 h-4 shrink-0" />
                   <span>{MANDEEP_CONFIG.advisor.primaryCta}</span>
                 </button>
 
                 <button
                   type="button"
                   onClick={onExploreCalculatorClick}
-                  className="inline-flex items-center justify-center gap-2 px-6 py-4 text-sm font-semibold text-[#141413] bg-white hover:bg-[#F3EFEA] border border-[#E6E1DA] rounded-full transition-colors cursor-pointer whitespace-nowrap shrink-0"
+                  className="inline-flex items-center justify-center gap-2 px-6 py-4 text-sm font-semibold text-white bg-white/8 hover:bg-white/14 border border-white/15 rounded-full transition-all cursor-pointer whitespace-nowrap shrink-0"
                 >
                   <span>Interactive Wealth Calculator</span>
-                  <ArrowRight className="w-4 h-4 text-[#57534E] shrink-0" />
+                  <ArrowRight className="w-4 h-4 text-[#2DD4BF] shrink-0" />
                 </button>
               </div>
 
-              {/* Client Best-Interest Trust Line */}
-              <div className="flex flex-wrap items-center gap-2 text-xs text-[#57534E]">
-                <Shield className="w-3.5 h-3.5 text-[#9A6B26] shrink-0" />
-                <span className="font-semibold text-[#141413]">
+              {/* Trust Line */}
+              <div className="flex flex-wrap items-center gap-2 text-xs text-white/50">
+                <Shield className="w-3.5 h-3.5 text-[#2DD4BF] shrink-0" />
+                <span className="font-semibold text-white/80">
                   {MANDEEP_CONFIG.advisor.brandPromise}
                 </span>
                 <span aria-hidden="true">·</span>
@@ -135,78 +128,78 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               </div>
             </div>
 
-            {/* Bottom 3-Column Institutional Serif Stat Strip */}
-            <div className="pt-8 border-t border-[#E6E1DA] grid grid-cols-3 gap-6">
+            {/* Bottom Stats Strip */}
+            <div className="pt-8 border-t border-white/10 grid grid-cols-3 gap-6">
               <div>
-                <p className="font-editorial text-2xl sm:text-3xl font-bold tabular-nums text-[#141413]">
+                <p className="font-editorial text-2xl sm:text-3xl font-bold tabular-nums text-white">
                   $8,000
                 </p>
-                <p className="mt-1 text-xs text-[#57534E]">
+                <p className="mt-1 text-xs text-white/50">
                   2026 FHSA Annual Limit ($40k Lifetime)
                 </p>
               </div>
               <div>
-                <p className="font-editorial text-2xl sm:text-3xl font-bold tabular-nums text-[#141413]">
+                <p className="font-editorial text-2xl sm:text-3xl font-bold tabular-nums text-white">
                   $7,000
                 </p>
-                <p className="mt-1 text-xs text-[#57534E]">
+                <p className="mt-1 text-xs text-white/50">
                   2026 TFSA Annual Limit (Tax-Free Growth)
                 </p>
               </div>
               <div>
-                <p className="font-editorial text-2xl sm:text-3xl font-bold tabular-nums text-[#9A6B26]">
+                <p className="font-editorial text-2xl sm:text-3xl font-bold tabular-nums gradient-text-teal">
                   ~$105,500
                 </p>
-                <p className="mt-1 text-xs text-[#57534E]">
+                <p className="mt-1 text-xs text-white/50">
                   $8k/yr × 10 Yrs @ 6% Return
                 </p>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Executive Advisor Dossier & Discovery Session Card (5 Cols) */}
-          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl overflow-hidden bg-white border border-[#E6E1DA] shadow-xs">
-            {/* Top Dark Obsidian Executive Practice Header */}
-            <div className="relative bg-[#141413] text-[#FAF8F5] p-7 sm:p-8 flex-1 flex flex-col justify-between space-y-8">
-              {/* Top Meta Row */}
-              <div className="flex items-center justify-between gap-2 text-xs text-[#FAF8F5]/75">
+          {/* Right Column: Advisor Card */}
+          <div className="lg:col-span-5 flex flex-col justify-between rounded-3xl overflow-hidden glass-card-dark shadow-2xl">
+            {/* Dark Header */}
+            <div className="relative p-7 sm:p-8 flex-1 flex flex-col justify-between space-y-8">
+              {/* Top Meta */}
+              <div className="flex items-center justify-between gap-2 text-xs text-white/60">
                 <span>British Columbia · Canada</span>
-                <span className="text-[#D4A359] font-medium">Client-First Practice</span>
+                <span className="text-[#2DD4BF] font-medium">Client-First Practice</span>
               </div>
 
-              {/* Center Architectural Crest & Core Wealth Mandate */}
+              {/* Center: Identity & Wealth Mandate */}
               <div className="my-auto py-4 space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-16 h-16 rounded-2xl bg-[#1F1E1B] border border-[#D4A359]/40 flex items-center justify-center shrink-0">
-                    <span className="font-editorial text-2xl font-bold tracking-wider text-[#D4A359]">
+                  <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#2DD4BF]/20 to-[#38BDF8]/20 border border-[#2DD4BF]/30 flex items-center justify-center shrink-0">
+                    <span className="font-editorial text-2xl font-bold tracking-wider text-[#2DD4BF]">
                       MG
                     </span>
                   </div>
                   <div className="space-y-1">
-                    <p className="text-xs uppercase tracking-widest text-[#D4A359] font-semibold">
+                    <p className="text-xs font-semibold text-[#2DD4BF] tracking-wider">
                       Private Wealth Advisory
                     </p>
                     <p className="font-editorial italic text-xl text-white">
-                      “{MANDEEP_CONFIG.advisor.brandPromise}”
+                      "{MANDEEP_CONFIG.advisor.brandPromise}"
                     </p>
                   </div>
                 </div>
 
-                {/* Clean 2026 Registered Account Brief inside Executive Card */}
-                <div className="rounded-2xl bg-[#1C1B18] border border-white/10 p-4 space-y-3">
+                {/* Growth Preview Card */}
+                <div className="rounded-2xl bg-white/5 border border-white/10 p-4 space-y-3">
                   <div className="flex items-center justify-between text-xs border-b border-white/10 pb-2.5">
-                    <span className="text-[#FAF8F5]/70">Featured 10-Yr Model (6%)</span>
-                    <span className="font-mono-tabular font-semibold text-[#D4A359]">
+                    <span className="text-white/60">Featured 10-Yr Model (6%)</span>
+                    <span className="font-mono-tabular font-semibold text-[#2DD4BF]">
                       $8,000/yr → ~$105,500
                     </span>
                   </div>
                   <div className="grid grid-cols-2 gap-3 text-xs">
                     <div>
-                      <p className="text-[#FAF8F5]/60">Principal Contributed</p>
+                      <p className="text-white/50">Principal Contributed</p>
                       <p className="font-mono-tabular font-semibold text-white mt-0.5">$80,000</p>
                     </div>
                     <div>
-                      <p className="text-[#FAF8F5]/60">Tax-Free Growth</p>
+                      <p className="text-white/50">Tax-Free Growth</p>
                       <p className="font-mono-tabular font-semibold text-[#34D399] mt-0.5">
                         +$25,500
                       </p>
@@ -214,56 +207,56 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
                   </div>
                 </div>
 
-                {/* Direct Contact Lines */}
-                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-[#FAF8F5]/80 pt-1">
+                {/* Contact Lines */}
+                <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-xs text-white/70 pt-1">
                   <a
                     href={MANDEEP_CONFIG.advisor.phoneHref}
-                    className="inline-flex items-center gap-1.5 font-mono-tabular hover:text-[#D4A359] transition-colors"
+                    className="inline-flex items-center gap-1.5 font-mono-tabular hover:text-[#2DD4BF] transition-colors"
                   >
-                    <Phone className="w-3.5 h-3.5 text-[#D4A359]" />
+                    <Phone className="w-3.5 h-3.5 text-[#2DD4BF]" />
                     <span>{MANDEEP_CONFIG.advisor.phoneDisplay}</span>
                   </a>
                   <a
                     href={MANDEEP_CONFIG.advisor.emailHref}
-                    className="inline-flex items-center gap-1.5 font-mono-tabular hover:text-[#D4A359] transition-colors"
+                    className="inline-flex items-center gap-1.5 font-mono-tabular hover:text-[#2DD4BF] transition-colors"
                   >
-                    <Mail className="w-3.5 h-3.5 text-[#D4A359]" />
+                    <Mail className="w-3.5 h-3.5 text-[#2DD4BF]" />
                     <span>{MANDEEP_CONFIG.advisor.email}</span>
                   </a>
                 </div>
               </div>
 
               {/* Advisor Nameplate */}
-              <div className="pt-4 border-t border-white/12">
+              <div className="pt-4 border-t border-white/10">
                 <h2 className="font-editorial text-2xl sm:text-3xl font-bold text-white">
                   {MANDEEP_CONFIG.advisor.fullName}
                 </h2>
-                <p className="text-xs sm:text-sm text-[#FAF8F5]/75 mt-0.5">
+                <p className="text-xs sm:text-sm text-white/60 mt-0.5">
                   {MANDEEP_CONFIG.advisor.roleTitle} · {MANDEEP_CONFIG.advisor.instagramHandle}
                 </p>
               </div>
             </div>
 
-            {/* Bottom White Discovery Strategy Session Card (Matching Sarmila-reddy) */}
-            <div className="bg-white p-6 sm:p-7 space-y-4">
-              <div className="flex items-center justify-between gap-2 pb-3 border-b border-[#E6E1DA]">
-                <span className="text-xs sm:text-sm font-bold text-[#141413]">
+            {/* Bottom Discovery Card */}
+            <div className="bg-white/5 border-t border-white/10 p-6 sm:p-7 space-y-4">
+              <div className="flex items-center justify-between gap-2 pb-3 border-b border-white/10">
+                <span className="text-xs sm:text-sm font-bold text-white">
                   Discovery Strategy Session:
                 </span>
-                <span className="text-xs font-semibold text-[#15803D]">
+                <span className="text-xs font-semibold text-[#34D399]">
                   Complimentary · 30 Min
                 </span>
               </div>
 
               <div className="space-y-1.5">
-                <div className="flex items-center justify-between text-xs text-[#57534E]">
-                  <span className="font-semibold text-[#141413]">Virtual Video or Phone</span>
+                <div className="flex items-center justify-between text-xs text-white/60">
+                  <span className="font-semibold text-white">Virtual Video or Phone</span>
                   <span className="inline-flex items-center gap-1">
                     <Clock className="w-3.5 h-3.5" />
                     Flexible PST Times
                   </span>
                 </div>
-                <p className="text-xs sm:text-sm text-[#57534E] leading-relaxed">
+                <p className="text-xs sm:text-sm text-white/60 leading-relaxed">
                   A pressure-free review of your TFSA &amp; FHSA contribution room, tax deduction
                   strategy, and custom compounding blueprint.
                 </p>
@@ -272,9 +265,9 @@ export const HeroSection: React.FC<HeroSectionProps> = ({
               <button
                 type="button"
                 onClick={onPrimaryCtaClick}
-                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs sm:text-sm font-semibold text-[#FAF8F5] bg-[#141413] hover:bg-[#292524] rounded-full transition-colors cursor-pointer"
+                className="w-full inline-flex items-center justify-center gap-2 px-5 py-3.5 text-xs sm:text-sm font-semibold text-[#0A1628] bg-gradient-to-r from-[#2DD4BF] to-[#5EEAD4] hover:from-[#5EEAD4] hover:to-[#2DD4BF] rounded-full transition-all cursor-pointer"
               >
-                <Calendar className="w-4 h-4 text-[#D4A359]" />
+                <Calendar className="w-4 h-4" />
                 <span>Select Time &amp; Book Strategy Call</span>
               </button>
             </div>
