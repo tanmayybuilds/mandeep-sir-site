@@ -22,9 +22,6 @@ export const Navbar: React.FC<NavbarProps> = ({ onBookClick }) => {
               <span className="font-editorial text-xl font-bold tracking-tight text-[#0A1628]">
                 {MANDEEP_CONFIG.advisor.fullName}
               </span>
-              <span className="text-[10px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200">
-                BC Wealth
-              </span>
             </div>
             <p className="text-xs text-slate-500 font-medium">
               Registered Account Advisory · @mannygurm
