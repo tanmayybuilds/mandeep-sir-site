@@ -10,8 +10,8 @@ export const AccountDeepDive: React.FC<AccountDeepDiveProps> = ({
   onSelectConsultationFocus,
 }) => {
   return (
-    <section id="accounts" className="scroll-mt-20 py-20 lg:py-28 px-6 bg-white border-b border-slate-200/80">
-      <div className="max-w-[1280px] mx-auto space-y-14">
+    <section id="accounts" className="scroll-mt-16 py-14 lg:py-24 px-4 sm:px-6 bg-white border-b border-slate-200/80">
+      <div className="max-w-[1280px] mx-auto space-y-10 sm:space-y-14">
         {/* Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-[11px] uppercase tracking-[0.24em] font-bold text-teal-700">
@@ -23,15 +23,15 @@ export const AccountDeepDive: React.FC<AccountDeepDiveProps> = ({
               Clarity before commitment.
             </span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-600 leading-relaxed">
+          <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-xl mx-auto">
             Two powerful registered accounts under the CRA. Here is exactly what you can invest in, how the tax benefits work, and when to use each.
           </p>
         </div>
 
         {/* Side-by-Side Account Feature Cards (Directly from Mandeep's Graphic) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 items-stretch">
           {/* Card 1: TFSA */}
-          <div className="rounded-3xl bg-slate-50/70 border border-slate-200/90 p-8 sm:p-10 flex flex-col justify-between shadow-xs hover:border-slate-300 hover:bg-white hover:shadow-md transition-all duration-300 space-y-6">
+          <div className="rounded-3xl bg-slate-50/70 border border-slate-200/90 p-5 sm:p-8 md:p-10 flex flex-col justify-between shadow-xs hover:border-slate-300 hover:bg-white hover:shadow-md transition-all duration-300 space-y-6">
             <div className="space-y-6">
               <div className="flex items-center justify-between">
                 <div className="flex items-center gap-3.5">
@@ -90,7 +90,7 @@ export const AccountDeepDive: React.FC<AccountDeepDiveProps> = ({
           </div>
 
           {/* Card 2: FHSA */}
-          <div className="rounded-3xl bg-white border-2 border-teal-500/40 p-8 sm:p-10 flex flex-col justify-between shadow-xl shadow-teal-500/5 hover:border-teal-500/60 transition-all duration-300 space-y-6 relative overflow-hidden">
+          <div className="rounded-3xl bg-white border-2 border-teal-500/40 p-5 sm:p-8 md:p-10 flex flex-col justify-between shadow-xl shadow-teal-500/5 hover:border-teal-500/60 transition-all duration-300 space-y-6 relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-teal-400 to-sky-400" />
 
             <div className="space-y-6">

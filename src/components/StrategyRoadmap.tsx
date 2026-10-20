@@ -53,8 +53,8 @@ export const StrategyRoadmap: React.FC<StrategyRoadmapProps> = ({ onBookStrategy
   ];
 
   return (
-    <section id="strategy" className="scroll-mt-20 py-20 lg:py-28 px-6 bg-slate-50/70 border-b border-slate-200/80">
-      <div className="max-w-[1280px] mx-auto space-y-14">
+    <section id="strategy" className="scroll-mt-16 py-14 lg:py-24 px-4 sm:px-6 bg-slate-50/70 border-b border-slate-200/80">
+      <div className="max-w-[1280px] mx-auto space-y-10 sm:space-y-14">
         {/* Editorial Section Header */}
         <div className="max-w-2xl mx-auto text-center space-y-3">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-teal-500/10 border border-teal-500/20 text-[11px] uppercase tracking-[0.24em] font-bold text-teal-700">

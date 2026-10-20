@@ -219,7 +219,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
   return (
     <section
       id="book"
-      className="scroll-mt-16 py-14 lg:py-20 px-6 bg-[#0A1628]/[0.02] border-t border-slate-200/80 relative overflow-hidden"
+      className="scroll-mt-16 py-14 lg:py-20 px-4 sm:px-6 bg-[#0A1628]/[0.02] border-t border-slate-200/80 relative overflow-hidden"
     >
       {/* Decorative ambient background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-teal-500/5 rounded-full blur-[140px] pointer-events-none" />
@@ -300,7 +300,7 @@ export const BookingEngine: React.FC<BookingEngineProps> = ({
         </div>
 
         {/* Streamlined Booking Card */}
-        <div className="rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 shadow-sm">
+        <div className="rounded-3xl bg-white border border-slate-200/90 p-4 sm:p-8 shadow-sm">
           {submittedBooking ? (
             <div data-testid="booking-confirmation" className="space-y-6">
               <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 border border-teal-200 text-xs font-semibold text-teal-800 w-fit">
