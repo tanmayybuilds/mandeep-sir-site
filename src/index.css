@@ -4,7 +4,7 @@
   :root {
     --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --font-serif: 'DM Serif Display', Georgia, serif;
-    --font-mono: 'IBM Plex Mono', monospace;
+    --font-mono: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 
     /* Core Palette — Deep Navy & Arctic Teal */
     --navy-950: #0A1628;

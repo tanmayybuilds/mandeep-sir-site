@@ -1,13 +1,9 @@
 import React, { useState } from 'react';
 import { Navbar } from './components/Navbar.tsx';
 import { HeroSection } from './components/HeroSection.tsx';
-import { AboutPracticeSection } from './components/AboutPracticeSection.tsx';
-import { WhyChooseSection } from './components/WhyChooseSection.tsx';
 import { AccountDeepDive } from './components/AccountDeepDive.tsx';
 import { CompoundingCalculator } from './components/CompoundingCalculator.tsx';
-import { ComparisonMatrix } from './components/ComparisonMatrix.tsx';
 import { StrategyRoadmap } from './components/StrategyRoadmap.tsx';
-import { TestimonialsSection } from './components/TestimonialsSection.tsx';
 import { FaqSection } from './components/FaqSection.tsx';
 import { BookingEngine } from './components/BookingEngine.tsx';
 import { Footer } from './components/Footer.tsx';
@@ -35,7 +31,7 @@ export default function App() {
   const handleSelectConsultationFocus = (focus: ConsultationFocus) => {
     setSelectedFocus(focus);
     scrollToSection('#book');
-    showToast(`Selected consultation topic: ${focus}`);
+    showToast(`Selected: ${focus}`);
   };
 
   const handleLockScenarioAndBook = (scenario: CalculatorScenario) => {
@@ -49,7 +45,7 @@ export default function App() {
     }
     scrollToSection('#book');
     showToast(
-      `Attached ${scenario.years}-year (${scenario.displayProjectedTotal}) scenario to your booking request.`
+      `Attached ${scenario.years}-year (${scenario.displayProjectedTotal}) scenario to booking.`
     );
   };
 
@@ -58,27 +54,25 @@ export default function App() {
       <Navbar onBookClick={() => scrollToSection('#book')} />
 
       <main className="flex-1">
+        {/* 1. Hero: High-Impact Value Proposition & At-a-Glance Snapshot */}
         <HeroSection
           onPrimaryCtaClick={() => scrollToSection('#book')}
           onExploreCalculatorClick={() => scrollToSection('#calculator')}
         />
 
-        <AboutPracticeSection />
-
-        <WhyChooseSection />
-
-        <CompoundingCalculator onLockScenarioAndBook={handleLockScenarioAndBook} />
-
+        {/* 2. Core Comparison: TFSA vs. FHSA Decoded */}
         <AccountDeepDive onSelectConsultationFocus={handleSelectConsultationFocus} />
 
-        <ComparisonMatrix />
+        {/* 3. Interactive Wealth Simulator: 10-Yr Compounding */}
+        <CompoundingCalculator onLockScenarioAndBook={handleLockScenarioAndBook} />
 
+        {/* 4. Action Sequence: 3-Step Strategy Blueprint */}
         <StrategyRoadmap onBookStrategyClick={() => scrollToSection('#book')} />
 
-        <TestimonialsSection />
-
+        {/* 5. Essential FAQs: 4 High-Value Answers */}
         <FaqSection />
 
+        {/* 6. Direct Scheduler & Advisory Desk */}
         <BookingEngine
           selectedFocus={selectedFocus}
           onFocusChange={setSelectedFocus}
