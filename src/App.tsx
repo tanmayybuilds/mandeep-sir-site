@@ -7,6 +7,7 @@ import { StrategyRoadmap } from './components/StrategyRoadmap.tsx';
 import { FaqSection } from './components/FaqSection.tsx';
 import { BookingEngine } from './components/BookingEngine.tsx';
 import { Footer } from './components/Footer.tsx';
+import { FloatingStickyCTA } from './components/FloatingStickyCTA.tsx';
 import { CalculatorScenario, ConsultationFocus } from './types/financial.ts';
 
 export default function App() {
@@ -31,7 +32,7 @@ export default function App() {
   const handleSelectConsultationFocus = (focus: ConsultationFocus) => {
     setSelectedFocus(focus);
     scrollToSection('#book');
-    showToast(`Selected: ${focus}`);
+    showToast(`Selected topic: ${focus}`);
   };
 
   const handleLockScenarioAndBook = (scenario: CalculatorScenario) => {
@@ -45,12 +46,12 @@ export default function App() {
     }
     scrollToSection('#book');
     showToast(
-      `Attached ${scenario.years}-year (${scenario.displayProjectedTotal}) scenario to booking.`
+      `Attached ${scenario.years}-year (${scenario.displayProjectedTotal}) projection to booking.`
     );
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#F0F4F8] text-[#0A1628]">
+    <div className="min-h-screen flex flex-col bg-[#F4F6F9] text-[#0A1628]">
       <Navbar onBookClick={() => scrollToSection('#book')} />
 
       <main className="flex-1">
@@ -83,6 +84,9 @@ export default function App() {
       </main>
 
       <Footer />
+
+      {/* Floating Sticky CTA on Scroll (Desktop & Mobile) */}
+      <FloatingStickyCTA onBookClick={() => scrollToSection('#book')} />
 
       {/* Accessible Toast Notification */}
       {toastMessage && (
